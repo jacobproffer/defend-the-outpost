@@ -13,3 +13,10 @@ h3 {
 h4 {
   @include font-size($h4-font-sizes);
 }
+
+
+h1,
+h2 {
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+}
