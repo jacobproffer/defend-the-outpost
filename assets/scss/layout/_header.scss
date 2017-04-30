@@ -49,5 +49,5 @@
     background: -webkit-repeating-linear-gradient(top, transparent 0px, transparent 1px, rgba(0, 0, 0, 0.2) 1px, rgba(0, 0, 0, 0.2) 3px);background: repeating-linear-gradient(top, transparent 0px, transparent 1px, rgba(0, 0, 0, 0.2) 1px, rgba(0, 0, 0, 0.2) 3px);
     background-size: 100% 4px;
   }
-  @include transition(all 100ms ease-in-out);
+  @include transition(all 100ms ease-in);
 }
