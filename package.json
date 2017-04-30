@@ -1,5 +1,5 @@
 {
-  "name": "basic-shell",
+  "name": "sitrep",
   "version": "1.0.0",
   "description": "A basic website shell.",
   "main": "gulpfile.js",
@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacobproffer/basic-shell.git"
+    "url": "https://github.com/jacobproffer/sitrep.git"
   },
   "author": "Jacob Proffer <jacob@jacobproffer.com>",
   "license": "MIT",
-  "homepage": "https://github.com/jacobproffer/basic-shell",
+  "homepage": "https://github.com/jacobproffer/sitrep",
   "devDependencies": {
     "browser-sync": "^2.12.8",
     "gulp": "^3.9.1",
