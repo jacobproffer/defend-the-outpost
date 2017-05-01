@@ -14,8 +14,8 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  border-right: solid 1px rgba(150,150,150,0.5);
-  border-bottom: solid 1px rgba(150,150,150,0.5);
+  border-right: solid 1px $uav-line;
+  border-bottom: solid 1px $uav-line;
   @include ratio(16, 9);
   @include screen-between(762px, 1281px) {
     -webkit-flex: 0 1 50%;
