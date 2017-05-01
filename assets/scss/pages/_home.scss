@@ -3,6 +3,8 @@
 }
 
 .uav-grid-element {
+	position: relative;
+	display: block;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -12,15 +14,64 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
+  border-right: solid 1px rgba(150,150,150,0.5);
+  border-bottom: solid 1px rgba(150,150,150,0.5);
   @include ratio(16, 9);
   @include screen-between(762px, 1281px) {
     -webkit-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
+    &:nth-child(2n) {
+      border-right: 0;
+    }
   }
   @include screen-above(1281px) {
     -webkit-flex: 0 1 33.333%;
     -ms-flex: 0 1 33.333%;
     flex: 0 1 33.333%;
+    &:nth-child(3n) {
+      border-right: 0;
+    }
   }
+}
+
+.content {
+  @extend .uav-scan-lines;
+  @include background-cover;
+}
+
+.uav-thumbnail {
+  position: relative;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+.uav-caption {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	text-align: center;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	font-weight: 300;
+	color: $white;
+	opacity: 0;
+	background: rgba($white, 0.2);
+	h4 {
+		margin-bottom: 0;
+	}
+	&:hover {
+		opacity: 1;
+	}
 }

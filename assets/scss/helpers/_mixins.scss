@@ -81,8 +81,9 @@
 
 }
 
-@mixin background-cover($url) {
-  background: url($url) no-repeat center center fixed;
+@mixin background-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
