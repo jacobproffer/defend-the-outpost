@@ -21,7 +21,6 @@
     z-index: 9999;
     position: relative;
     text-transform: uppercase;
-    /* margin-top: 0; */
     padding-top: 0;
   }
 }
@@ -38,5 +37,4 @@
   background-repeat: no-repeat;
   background-image: url('../img/uav-1.jpg');
   @extend .uav-scan-lines;
-  @include transition(all 100ms ease-in);
 }
