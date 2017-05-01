@@ -40,16 +40,6 @@
   @include background-cover;
 }
 
-.uav-thumbnail {
-  position: relative;
-	display: block;
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	padding: 0;
-	margin: 0;
-}
-
 .uav-caption {
 	position: absolute;
 	top: 50%;
@@ -62,12 +52,11 @@
   align-items: center;
   justify-content: center;
 	text-align: center;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+	-webkit-transition: opacity 300ms ease-in-out;
+	transition: opacity 300ms ease-in-out;
 	font-weight: 300;
 	color: $white;
 	opacity: 0;
-	background: rgba($white, 0.2);
 	h4 {
 		margin-bottom: 0;
 	}
