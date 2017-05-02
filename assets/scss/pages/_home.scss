@@ -12,6 +12,7 @@
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
+  max-width: 100%;
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
@@ -22,6 +23,7 @@
     -webkit-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
+    max-width: 50%;
     &:nth-child(2n) {
       border-right: 0;
     }
@@ -30,6 +32,7 @@
     -webkit-flex: 0 1 33.333%;
     -ms-flex: 0 1 33.333%;
     flex: 0 1 33.333%;
+    max-width: 33.333%;
     &:nth-child(3n) {
       border-right: 0;
     }
