@@ -26,6 +26,7 @@
 }
 
 .uav-view {
+  will-change: transform; 
   z-index: 2;
   position: absolute;
   bottom: 0;
