@@ -36,7 +36,7 @@ gulp.task('sass', function () {
 
 // Configure JS.
 gulp.task('js', function() {
-  return gulp.src('assets/js/**/*.js')
+  return gulp.src(['assets/js/lib/jquery-3.2.1.min.js', 'assets/js/lib/fancybox/jquery.fancybox.js', 'assets/js/**/*.js'])
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(rename({suffix: '.min'}))
