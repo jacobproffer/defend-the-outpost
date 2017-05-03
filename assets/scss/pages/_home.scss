@@ -19,21 +19,12 @@
   border-right: solid 1px $uav-line;
   border-bottom: solid 1px $uav-line;
   @include ratio(16, 9);
-  @include screen-between(762px, 1281px) {
+  @include screen-above(762px) {
     -webkit-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
     max-width: 50%;
     &:nth-child(2n) {
-      border-right: 0;
-    }
-  }
-  @include screen-above(1281px) {
-    -webkit-flex: 0 1 33.333%;
-    -ms-flex: 0 1 33.333%;
-    flex: 0 1 33.333%;
-    max-width: 33.333%;
-    &:nth-child(3n) {
       border-right: 0;
     }
   }
