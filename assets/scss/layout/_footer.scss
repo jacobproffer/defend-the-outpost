@@ -1,6 +1,10 @@
 .footer {
   background: $black;
   padding: 40px 0;
+  text-align: center;
+  a {
+    display: inline-block;
+  }
 }
 
 .drone {
