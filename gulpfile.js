@@ -53,11 +53,11 @@ gulp.task('images', function () {
 });
 
 // Minify HTML
-gulp.task('minify', function() {
-  return gulp.src('*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./'));
-});
+// gulp.task('minify', function() {
+//   return gulp.src('*.html')
+//     .pipe(htmlmin({collapseWhitespace: true}))
+//     .pipe(gulp.dest('./'));
+// });
 
 gulp.task('watch', function () {
   gulp.watch('dist/scss/**/*.scss', ['sass']);
@@ -65,4 +65,4 @@ gulp.task('watch', function () {
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['minify', 'sass', 'js', 'images', 'serve']);
+gulp.task('default', ['sass', 'js', 'images', 'serve']);
