@@ -39,3 +39,16 @@ $('a[href*="#"]')
       }
     }
   });
+
+  $( '[data-fancybox]' ).fancybox({
+	caption : function( instance, item ) {
+		var caption, link;
+
+		if ( item.type === 'image' ) {
+			caption = $(this).data('caption');
+			link    = '<a href="' + item.src + '">Download image</a>';
+
+			return (caption ? caption + '<br />' : '') + link;
+		}
+	}
+});
