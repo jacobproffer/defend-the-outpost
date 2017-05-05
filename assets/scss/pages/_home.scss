@@ -1,5 +1,6 @@
 .uav-grid {
   @extend .flex;
+  overflow: hidden;
   border-top: solid 1px $uav-line;
 }
 
