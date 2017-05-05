@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  padding-top: 170px;
-  padding-bottom: 170px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   text-align: left;
   overflow: hidden;
   @extend .uav-border;
@@ -22,6 +22,10 @@
     position: relative;
     text-transform: uppercase;
     padding-top: 0;
+  }
+  @include screen-above(768px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
