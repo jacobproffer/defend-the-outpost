@@ -1,6 +1,6 @@
 # SITREP
 
-Source code and assets for The SITREP, a collection of aerial snapshots from the MQ-9 Reaper drone in ARMA 3.
+Source code and assets for The SITREP, a collection of high quality ARMA 3 wallpapers.
 
 ## Build Tasks
 
