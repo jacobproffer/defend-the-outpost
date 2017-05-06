@@ -51,4 +51,7 @@
   background-repeat: no-repeat;
   background-image: url('../img/uav-hero.jpg');
   @extend .uav-scan-lines;
+  @include screen-above(1025px) {
+    @include animate();
+  }
 }

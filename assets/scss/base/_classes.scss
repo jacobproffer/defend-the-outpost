@@ -17,11 +17,6 @@
   border-bottom: solid 1px $uav-line;
 }
 
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -31,8 +26,4 @@
   50% {
     opacity: 1;
   }
-}
-
-.zoomIn {
-  animation-name: zoomIn;
 }
