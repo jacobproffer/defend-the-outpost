@@ -19,6 +19,9 @@
   -ms-flex-item-align: auto;
   align-self: auto;
   border-bottom: solid 1px $uav-line;
+  &:hover {
+    cursor: crosshair;
+  }
   @include ratio(16, 9);
   @include screen-above(762px) {
     -webkit-flex: 0 1 50%;
