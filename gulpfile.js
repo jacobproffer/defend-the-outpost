@@ -8,7 +8,6 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     concat      = require('gulp-concat'),
     imagemin    = require('gulp-imagemin'),
-    htmlmin     = require('gulp-htmlmin'),
     browserSync = require('browser-sync').create();
 
 // Static Server + watching scss/html files
@@ -51,13 +50,6 @@ gulp.task('images', function () {
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
 });
-
-// Minify HTML
-// gulp.task('minify', function() {
-//   return gulp.src('*.html')
-//     .pipe(htmlmin({collapseWhitespace: true}))
-//     .pipe(gulp.dest('./'));
-// });
 
 gulp.task('watch', function () {
   gulp.watch('dist/scss/**/*.scss', ['sass']);
