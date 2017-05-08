@@ -11,6 +11,6 @@ Source code and assets for The SITREP, a collection of high quality ARMA 3 wallp
 
 - [X] Re-think title / sub-title
 - [X] Research fonts
-- [ ] Use appropriate sized thumbnails
+- [ ] Save out thumbnails
 - [ ] Add 8 (Min) images
 - [ ] Add captions
