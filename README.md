@@ -1,6 +1,6 @@
 # SITREP
 
-Source code and assets for The SITREP, a collection of high quality ARMA 3 wallpapers.
+Source code and assets for The SITREP, my first ARMA 3 scenario.
 
 ## Build Tasks
 
