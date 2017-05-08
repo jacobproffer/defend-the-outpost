@@ -49,6 +49,13 @@ hamburger.click(function() {
   $('.main-header').toggleClass('open');
 });
 
+$('a[href*="#"]').click(function() {
+  if ( $('.main-header').hasClass('open') ) {
+    $('.main-nav').removeClass('nav-open');
+    $('.main-header').removeClass('open');
+  }
+});
+
   $('header.main-header').headroom({
     offset    : headerHeight,
     tolerance   : { up:10, down:10 },
