@@ -160,11 +160,6 @@
   cursor: pointer;
   padding: 0;
   text-transform: uppercase;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
   @include screen-above(1024px) {
     display: none;
   }
@@ -174,7 +169,7 @@
       color: rgba(255, 255, 255, 0.6);
     }
     &:active {
-      color: rgba(255, 255, 255, 0.6);
+      color: $uav-line;
     }
   }
   &.navOpen,
