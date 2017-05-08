@@ -98,10 +98,9 @@
   li {
     list-style-type: none;
     text-align: center;
-    vertical-align: middle;
     padding: 10px 65px 10px 0;
     margin: 0;
-    border-bottom: 1px solid #1baaff;
+    border-bottom: 1px solid $white;
     a {
       cursor: pointer;
       font-size: 0.8375em;
@@ -119,7 +118,7 @@
     &:last-child {
       border-bottom: none;
       @include screen-above(1025px) {
-        padding: 10px 0;
+        padding: 0;
         margin: 0;
       }
     }
