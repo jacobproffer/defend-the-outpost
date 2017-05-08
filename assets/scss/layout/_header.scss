@@ -16,7 +16,7 @@
     color: white;
     opacity: 1;
     position: relative;
-    z-index: 9999;
+    z-index: 8;
     line-height: 1.5;
     margin-top: 0;
     margin-bottom: 0;
@@ -25,7 +25,7 @@
   p {
     color: white;
     display: block;
-    z-index: 9999;
+    z-index: 8;
     position: relative;
     padding-top: 0;
   }
@@ -53,5 +53,159 @@
   @extend .uav-scan-lines;
   @include screen-above(1025px) {
     @include animate();
+  }
+}
+
+.main-header {
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(11, 38, 43, .10);
+  position: fixed;
+  background: transparent;
+  width: 100%;
+  height: 100px;
+  overflow-y: visible;
+  z-index: 9;
+  @include transition(all 300ms ease-in-out);
+  will-change:transform;
+  &.unpinned {
+    transform: translateY(- 100px);
+  }
+  &.pinned {
+    transform: translateY(0);
+  }
+}
+
+.open {
+  height: 100%;
+  background: $black;
+}
+
+.logo {
+  display: inline-block;
+  margin: 0;
+}
+
+.main-nav {
+  @include transition( all 0.2s ease-out);
+  will-change:transform;
+  display: block;
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  z-index: 9;
+  li {
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 65px 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #1baaff;
+    a {
+      cursor: pointer;
+      font-size: 0.8375em;
+      font-weight: bold;
+      color: $white;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      letter-spacing: 3px;
+      transition: color 300ms ease-in-out;
+      &:hover {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+      @include screen-above(1025px) {
+        padding: 10px 0;
+        margin: 0;
+      }
+    }
+    @include screen-below(1025px) {
+      padding: 20px 32px;
+      margin: 0 16px;
+    }
+    @include screen-above(1025px) {
+      border-bottom: 0;
+      display: inline-block;
+    }
+  }
+  @include screen-above(1025px) {
+    margin: 0;
+    border-bottom: none;
+    opacity: 1;
+    background: none;
+    display: block;
+    height: inherit;
+    float: right;
+    position: relative;
+  }
+  &.nav-open {
+    opacity: 1;
+    height: inherit;
+  }
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  top: 30px;
+  right: 35px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  @include screen-above(1024px) {
+    display: none;
+  }
+  span {
+    @include transition(color 300ms ease-in-out);
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  &.navOpen,
+  &.close {
+    display: block;
+    div {
+      opacity: 1;
+      @include transform( rotate(90deg) scale(1.5));
+    }
+    span:nth-child(2) {
+      background: none;
+      &:before {
+        opacity: 1;
+        height: 1px;
+        @include transform( rotate(-45deg));
+      }
+      &:after {
+        opacity: 1;
+        height: 1px;
+        @include transform( rotate(45deg));
+      }
+    }
+    span:first-of-type {
+      // opacity: 0;
+      top: 50%;
+    }
+    span:last-of-type {
+      // opacity: 0;
+      top: 50%;
+      bottom: auto;
+    }
   }
 }

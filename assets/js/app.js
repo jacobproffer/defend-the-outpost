@@ -1,3 +1,6 @@
+var hamburger = $('.hamburger');
+var headerHeight = $('header.main-header').outerHeight();
+
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
 	$(".uav-view").css({
@@ -37,5 +40,22 @@ $('a[href*="#"]')
           }
         });
       }
+    }
+  });
+
+hamburger.click(function() {
+  $('.main-nav').toggleClass('nav-open');
+  $(this).toggleClass('navOpen');
+  $('.main-header').toggleClass('open');
+});
+
+  $('header.main-header').headroom({
+    offset    : headerHeight,
+    tolerance   : { up:10, down:10 },
+    classes : {
+      pinned   : "pinned",
+      unpinned : "unpinned",
+      top      : "onTop",
+      notTop   : "scrolled"
     }
   });

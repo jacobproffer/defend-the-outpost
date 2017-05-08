@@ -27,3 +27,13 @@
     opacity: 1;
   }
 }
+
+.drone {
+  width: 44px;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+  .dronePath {
+    fill: $white;
+  }
+}
