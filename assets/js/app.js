@@ -56,13 +56,13 @@ $('a[href*="#"]').click(function() {
   }
 });
 
-  $('header.main-header').headroom({
-    offset    : headerHeight,
-    tolerance   : { up:10, down:10 },
-    classes : {
-      pinned   : "pinned",
-      unpinned : "unpinned",
-      top      : "onTop",
-      notTop   : "scrolled"
-    }
-  });
+$('header.main-header').headroom({
+  offset    : headerHeight,
+  tolerance   : { up:10, down:10 },
+  classes : {
+    pinned   : "pinned",
+    unpinned : "unpinned",
+    top      : "onTop",
+    notTop   : "scrolled"
+  }
+});
