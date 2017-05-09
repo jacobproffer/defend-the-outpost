@@ -53,6 +53,7 @@ $('a[href*="#"]').click(function() {
   if ( $('.main-header').hasClass('open') ) {
     $('.main-nav').removeClass('nav-open');
     $('.main-header').removeClass('open');
+    $('.hamburger').removeClass('navOpen');
   }
 });
 
