@@ -17,3 +17,12 @@ body {
   color: white;
   background: $black;
 }
+
+a {
+  color: $white;
+  text-decoration: none;
+  @include transition(color 300ms ease-in-out);
+  &:hover {
+    color: $uav-line;
+  }
+}

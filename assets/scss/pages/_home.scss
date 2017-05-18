@@ -1,3 +1,47 @@
+.info {
+  padding: 60px 0;
+  h4 {
+    margin-top: 0;
+  }
+  h2 {
+    &:last-of-type {
+      padding-bottom: 100px;
+      margin-bottom: 0;
+      @extend .uav-border;
+    }
+  }
+  @include screen-above(1281px) {
+    padding: 90px 0;
+  }
+}
+
+.intel {
+  @extend .flex;
+  padding-top: 100px;
+  h3,
+  h5 {
+    margin-top: 0;
+  }
+}
+
+.intel-item {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  @include screen-above(768px) {
+    -webkit-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+}
+
 .uav-grid {
   @extend .flex;
   overflow: hidden;
