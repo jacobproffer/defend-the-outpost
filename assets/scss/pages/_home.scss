@@ -8,7 +8,7 @@
       padding-bottom: 50px;
       margin-bottom: 0;
       @extend .uav-border;
-      @include screen-above(768px) {
+      @include screen-above(850px) {
         padding-bottom: 100px;
       }
     }
@@ -27,7 +27,7 @@
   h5 {
     margin: 0;
   }
-  @include screen-above(768px) {
+  @include screen-above(850px) {
     padding-top: 100px;
   }
 }
@@ -42,7 +42,7 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  @include screen-above(768px) {
+  @include screen-above(850px) {
     -webkit-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
