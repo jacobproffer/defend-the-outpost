@@ -21,9 +21,11 @@
 .intel {
   @extend .flex;
   padding-top: 50px;
-  h3,
-  h5 {
+  h3 {
     margin-top: 0;
+  }
+  h5 {
+    margin: 0;
   }
   @include screen-above(768px) {
     padding-top: 100px;
