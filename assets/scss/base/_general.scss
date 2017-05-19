@@ -5,8 +5,8 @@
   outline: none;
 }
 
-::-moz-selection { background: rgba($black, 0.2); }
-::selection { background: rgba($black, 0.2); }
+::-moz-selection { color: rgba($black, 1.25); background: rgba($black, 1.25); }
+::selection { color: rgba($black, 1.25); background: rgba($black, 1.25); }
 
 img {
 	max-width: 100%;
@@ -15,7 +15,7 @@ img {
 body {
   font-family: 'Overpass Mono', monospace;
   color: white;
-  background: $black;
+  background: lighten($black, 1.5);
 }
 
 a {
