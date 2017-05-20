@@ -14,8 +14,7 @@
   }
 }
 
-.info,
-.download {
+.info {
   padding: 60px 0;
   @include screen-above(1281px) {
     padding: 90px 0;
@@ -118,9 +117,4 @@
 	&:hover {
 		opacity: 1;
 	}
-}
-
-.download {
-  text-align: center;
-  @extend .uav-border;
 }

@@ -5,15 +5,15 @@
   outline: none;
 }
 
-::-moz-selection { color: rgba($black, 1.25); background: rgba($black, 1.25); }
-::selection { color: rgba($black, 1.25); background: rgba($black, 1.25); }
+::-moz-selection { background: rgba($black, 1.25); }
+::selection { background: rgba($black, 1.25); }
 
 img {
 	max-width: 100%;
 }
 
 body {
-  font-family: 'Overpass Mono', monospace;
+  font-family: 'Titillium Web', sans-serif;
   color: white;
   background: lighten($black, 1.5);
 }
