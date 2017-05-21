@@ -5,8 +5,8 @@
   outline: none;
 }
 
-::-moz-selection { background: rgba($black, 1.25); }
-::selection { background: rgba($black, 1.25); }
+::-moz-selection { background: rgba($black, .90); }
+::selection { background: rgba($black, .90); }
 
 img {
 	max-width: 100%;
