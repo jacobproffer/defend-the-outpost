@@ -1,4 +1,6 @@
 .info {
+  padding: 60px 0;
+  border-top: solid 1px $uav-line;
   h4 {
     margin-top: 0;
   }
@@ -12,10 +14,6 @@
       }
     }
   }
-}
-
-.info {
-  padding: 60px 0;
   @include screen-above(1281px) {
     padding: 90px 0;
   }
