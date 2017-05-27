@@ -1,5 +1,5 @@
 var hamburger = $('.hamburger');
-var headerHeight = $('header.main-header').outerHeight();
+var headerHeight = $('.main-header').outerHeight();
 
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
@@ -57,13 +57,17 @@ $('a[href*="#"]').click(function() {
   }
 });
 
-$('header.main-header').headroom({
+$('.main-header').headroom({
   offset    : headerHeight,
   tolerance   : { up:10, down:10 },
   classes : {
     pinned   : "pinned",
     unpinned : "unpinned",
     top      : "onTop",
+    bottom   : "onBottom",
     notTop   : "scrolled"
+  },
+  onTop : function() {
+    $('.main-header').removeClass('pinned');
   }
 });
