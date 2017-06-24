@@ -1,4 +1,6 @@
+var htmlBody = $('html, body');
 var hamburger = $('.hamburger');
+var mainHeader = $('.main-header');
 var headerHeight = $('.main-header').outerHeight();
 
 $(window).scroll(function() {
@@ -46,7 +48,8 @@ $('a[href*="#"]')
 hamburger.click(function() {
   $('.main-nav').toggleClass('nav-open');
   $(this).toggleClass('navOpen');
-  $('.main-header').toggleClass('open');
+  mainHeader.toggleClass('open');
+  htmlBody.toggleClass('body-modal-open');
 });
 
 $('a[href*="#"]').click(function() {
@@ -57,7 +60,7 @@ $('a[href*="#"]').click(function() {
   }
 });
 
-$('.main-header').headroom({
+mainHeader.headroom({
   offset    : headerHeight,
   tolerance   : { up:10, down:10 },
   classes : {
@@ -68,6 +71,6 @@ $('.main-header').headroom({
     notTop   : "scrolled"
   },
   onTop : function() {
-    $('.main-header').removeClass('pinned');
+    mainHeader.removeClass('pinned');
   }
 });

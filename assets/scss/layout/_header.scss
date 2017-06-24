@@ -132,6 +132,9 @@
       display: inline-block;
     }
   }
+  @include screen-below(1025px) {
+    pointer-events: none;
+  }
   @include screen-above(1025px) {
     margin: 0;
     border-bottom: none;
@@ -208,4 +211,10 @@
       bottom: auto;
     }
   }
+}
+
+.body-modal-open {
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
 }
