@@ -61,6 +61,9 @@ hamburger.click(function() {
         e.stopPropagation();
       }
     });
+    body.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    });
   } else {
     body.unbind('touchmove');
   }
