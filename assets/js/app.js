@@ -58,12 +58,11 @@ hamburger.click(function() {
     body.bind('touchmove', function(e) {
       if (!$(e.target).parents().hasClass('nav-open')) {
         e.preventDefault();
+        e.stopPropagation();
       }
     });
-    body.addEventListener('touchstart', prevent);
   } else {
     body.unbind('touchmove');
-    body.removeEventListenr('touchstart', prevent);
   }
 });
 
