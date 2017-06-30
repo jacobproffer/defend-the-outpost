@@ -58,11 +58,7 @@ hamburger.click(function() {
     body.bind('touchmove', function(e) {
       if (!$(e.target).parents().hasClass('nav-open')) {
         e.preventDefault();
-        e.stopPropagation();
       }
-    });
-    body.addEventListener('touchmove', function(e) {
-      e.preventDefault();
     });
   } else {
     body.unbind('touchmove');
