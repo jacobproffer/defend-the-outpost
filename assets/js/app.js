@@ -1,3 +1,4 @@
+var isAndroid = /(android)/i.test(navigator.userAgent);
 var scrollTopPosition = 0;
 var lastKnownScrollTopPosition = 0;
 var htmlBody = $('html, body');
