@@ -59,6 +59,9 @@ hamburger.click(function() {
       if (!$(e.target).parents().hasClass('nav-open')) {
         e.preventDefault();
       }
+      if ( navigator.userAgent.match(/Android/i)) {
+        e.preventDefault();
+      }
     });
   } else {
     body.unbind('touchmove');
