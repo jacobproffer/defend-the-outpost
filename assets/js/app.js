@@ -54,19 +54,6 @@ hamburger.click(function() {
   htmlBody.toggleClass('body-modal-open');
 });
 
-if( navigator.userAgent.match(/iPhone|iPad|iPod/i) ) {
-  htmlBody.addClass('platform-ios');
-  $(window).scroll(function() {
-    scrollTopPosition = $(document).scrollTop();
-  });
-  if ( $('.main-nav').hasClass('nav-open') ) {
-    $('body').css('top', (scrollTopPosition * -1));
-    lastKnownScrollTopPosition = scrollTopPosition;
-  } else {
-    $('body').scrollTop(lastKnownScrollTopPosition);
-  }
-}
-
 $('a[href*="#"]').click(function() {
   if ( $('.main-header').hasClass('open') ) {
     $('.main-nav').removeClass('nav-open');
