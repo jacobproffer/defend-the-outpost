@@ -13,3 +13,4 @@ Source code and assets for The SITREP, my first ARMA 3 scenario.
 - [X] Research fonts
 - [X] Save out thumbnails
 - [X] Add 8 (Min) images
+- [ ] Clean-up JavaScript
