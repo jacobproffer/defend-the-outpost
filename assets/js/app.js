@@ -1,8 +1,10 @@
 var scrollTopPosition = 0;
 var lastKnownScrollTopPosition = 0;
 var htmlBody = $('html, body');
+var body = $('body');
 var hamburger = $('.hamburger');
 var mainHeader = $('.main-header');
+var mainNav = $('.main-nav');
 var headerHeight = $('.main-header').outerHeight();
 
 $(window).scroll(function() {
@@ -48,18 +50,18 @@ $('a[href*="#"]')
   });
 
 hamburger.click(function() {
-  $('.main-nav').toggleClass('nav-open');
+  mainNav.toggleClass('nav-open');
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
-  htmlBody.toggleClass('body-modal-open');
-  if ( $('.main-nav').hasClass('nav-open')) {
-    $('body').bind('touchmove', function(e) {
+  body.toggleClass('body-modal-open');
+  if ( mainNav.hasClass('nav-open')) {
+    body.bind('touchmove', function(e) {
       if (!$(e.target).parents().hasClass('nav-open')) {
         e.preventDefault();
       }
     });
   } else {
-    $('body').unbind('touchmove');
+    body.unbind('touchmove');
   }
 });
 
