@@ -52,11 +52,15 @@ hamburger.click(function() {
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
   htmlBody.toggleClass('body-modal-open');
-  $('body').bind('touchmove', function(e) {
-    if (!$(e.target).parents().hasClass('nav-open')) {
-      e.preventDefault();
-    }
-  });
+  if ( $('.main-nav').hasClass('nav-open')) {
+    $('body').bind('touchmove', function(e) {
+      if (!$(e.target).parents().hasClass('nav-open')) {
+        e.preventDefault();
+      }
+    });
+  } else {
+    $('body').unbind('touchmove');
+  }
 });
 
 $('a[href*="#"]').click(function() {
