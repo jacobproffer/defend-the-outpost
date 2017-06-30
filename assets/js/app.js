@@ -60,11 +60,10 @@ hamburger.click(function() {
         e.preventDefault();
       }
     });
-    body.addEventListener('touchstart', function(e) {
-      e.preventDefault();
-    });
+    body.addEventListener('touchmove', prevent);
   } else {
     body.unbind('touchmove');
+    body.removeEventListenr('touchmove', prevent);
   }
 });
 
