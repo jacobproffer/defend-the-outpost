@@ -52,6 +52,11 @@ hamburger.click(function() {
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
   htmlBody.toggleClass('body-modal-open');
+  $('body').bind('touchmove', function(e) {
+    if (!$(e.target).parents().hasClass('nav-open')) {
+      e.preventDefault();
+    }
+  });
 });
 
 $('a[href*="#"]').click(function() {
