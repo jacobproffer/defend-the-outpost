@@ -1,8 +1,4 @@
-var isAndroid = /(android)/i.test(navigator.userAgent);
-var scrollTopPosition = 0;
-var lastKnownScrollTopPosition = 0;
-var htmlBody = $('html, body');
-var body = $('body');
+var body = $('html, body');
 var hamburger = $('.hamburger');
 var mainHeader = $('.main-header');
 var mainNav = $('.main-nav');
@@ -13,6 +9,22 @@ $(window).scroll(function() {
 	$(".uav-view").css({
 		transform: 'scale('+(100 + scroll/5)/100+')',
 	});
+});
+
+hamburger.click(function() {
+  mainNav.toggleClass('nav-open');
+  $(this).toggleClass('navOpen');
+  mainHeader.toggleClass('open');
+  body.toggleClass('body-modal-open');
+  body.toggleClass('disable-scrolling');
+});
+
+$('a[href*="#"]').click(function() {
+  mainNav.removeClass('nav-open');
+  mainHeader.removeClass('open');
+  hamburger.removeClass('navOpen');
+  body.removeClass('body-modal-open');
+  body.removeClass('disable-scrolling');
 });
 
 $('a[href*="#"]')
@@ -49,30 +61,6 @@ $('a[href*="#"]')
       }
     }
   });
-
-hamburger.click(function() {
-  mainNav.toggleClass('nav-open');
-  $(this).toggleClass('navOpen');
-  mainHeader.toggleClass('open');
-  body.toggleClass('body-modal-open');
-  if ( mainNav.hasClass('nav-open')) {
-    body.bind('touchmove', function(e) {
-      if (!$(e.target).parents().hasClass('nav-open')) {
-        e.preventDefault();
-      }
-    });
-  } else {
-    body.unbind('touchmove');
-  }
-});
-
-$('a[href*="#"]').click(function() {
-  if ( $('.main-header').hasClass('open') ) {
-    $('.main-nav').removeClass('nav-open');
-    $('.main-header').removeClass('open');
-    $('.hamburger').removeClass('navOpen');
-  }
-});
 
 mainHeader.headroom({
   offset    : headerHeight,
