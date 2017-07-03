@@ -16,7 +16,7 @@ hamburger.click(function() {
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
   body.toggleClass('body-modal-open');
-  body.toggleClass('disable-scrolling');
+	body.toggleClass('disable-scrolling');
 });
 
 $('a[href*="#"]').click(function() {
