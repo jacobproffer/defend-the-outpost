@@ -15,7 +15,7 @@ hamburger.click(function() {
   mainNav.toggleClass('nav-open');
   $(this).toggleClass('navOpen');
   mainHeader.toggleClass('open');
-  body.toggleClass('body-modal-open');
+	body.toggleClass('body-modal-open');
 	body.toggleClass('disable-scrolling');
 });
 
@@ -76,3 +76,21 @@ mainHeader.headroom({
     mainHeader.removeClass('pinned');
   }
 });
+
+/*
+Fix to disable scrolling on mobile when a modal is open.
+Needs to be converted to jQuery.
+*/
+document.ontouchmove = function ( event ) {
+  var isTouchMoveAllowed = true, target = event.target;
+  while ( target !== null ) {
+    if ( target.classList && target.classList.contains( 'disable-scrolling' ) ) {
+      isTouchMoveAllowed = false;
+      break;
+    }
+    target = target.parentNode;
+  }
+  if ( !isTouchMoveAllowed ) {
+    event.preventDefault();
+  }
+};
