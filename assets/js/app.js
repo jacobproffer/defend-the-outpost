@@ -12,7 +12,6 @@ $(window).scroll(function() {
   } else {
     scroll = 1000;
   }
-  console.log(scroll);
 	uav.css({
 		transform: 'scale('+(100 + scroll/5)/100+')',
 	});
