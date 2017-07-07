@@ -3,10 +3,17 @@ var hamburger = $('.hamburger');
 var mainHeader = $('.main-header');
 var mainNav = $('.main-nav');
 var headerHeight = $('.main-header').outerHeight();
+var uav = $('.uav-view');
 
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
-	$(".uav-view").css({
+  if (scroll < 1000) {
+    scroll = $(window).scrollTop();
+  } else {
+    scroll = 1000;
+  }
+  console.log(scroll);
+	uav.css({
 		transform: 'scale('+(100 + scroll/5)/100+')',
 	});
 });
