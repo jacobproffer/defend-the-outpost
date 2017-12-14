@@ -20,3 +20,8 @@ h5 {
   @include font-size($h5-font-sizes);
   line-height: 2;
 }
+
+p {
+  @include font-size($p-font-sizes);
+  line-height: 2;
+}

@@ -13,9 +13,11 @@ img {
 }
 
 body {
+  font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   color: white;
   background: lighten($black, 1.5);
+  line-height: 1.5;
 }
 
 a {
