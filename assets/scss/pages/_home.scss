@@ -8,7 +8,7 @@
     &:last-of-type {
       padding-bottom: 50px;
       margin-bottom: 0;
-      border-bottom: 1px solid $border;
+      border-bottom: 1px solid $red;
       @include screen-above(850px) {
         padding-bottom: 100px;
       }
