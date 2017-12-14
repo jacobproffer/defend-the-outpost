@@ -19,6 +19,12 @@
   }
 }
 
+.info-wrap {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .intel {
   @extend .flex;
   padding-top: 50px;
@@ -44,11 +50,20 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
+  @include screen-below(850px) {
+    &:nth-of-type(2) {
+      margin-bottom: 50px;
+    }
+  }
   @include screen-above(850px) {
     -webkit-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
     max-width: 50%;
+    &:first-of-type,
+    &:nth-of-type(2) {
+      margin-bottom: 50px;
+    }
   }
 }
 
