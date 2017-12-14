@@ -15,6 +15,10 @@
     @include absolute(0, 0, 0, 0);
     @include size(100%);
     @include gradient-vertical($black, transparent);
+    @supports (mix-blend-mode: lighten) {
+      background-color: rgba(218, 54, 16, .95);
+      mix-blend-mode: multiply;
+    }
   }
   .container {
     margin: 0;
@@ -29,7 +33,7 @@
     margin-bottom: 0;
     letter-spacing: 0.15em;
     margin: 0em -0.15em 0em 0;
-    border-bottom: 1px solid $red;
+    border-bottom: 1px solid $border;
   }
   p {
     color: $white;
@@ -158,7 +162,7 @@
 }
 
 .inactive {
-  color: $red;
+  color: rgba(110, 110, 110, 1);
   text-decoration: line-through;
 }
 

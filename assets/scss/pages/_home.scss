@@ -8,7 +8,7 @@
     &:last-of-type {
       padding-bottom: 50px;
       margin-bottom: 0;
-      border-bottom: 1px solid $red;
+      border-bottom: 1px solid $border;
       @include screen-above(850px) {
         padding-bottom: 100px;
       }
@@ -108,7 +108,7 @@
 	-webkit-transition: opacity 300ms ease-in-out;
 	transition: opacity 300ms ease-in-out;
   background-color: none;
-  @include transition(background-color 250ms ease-in-out);
+  @include transition(background-color 300ms ease-in-out);
   @supports (mix-blend-mode: lighten) {
     background-color: rgba(218, 54, 16, .95);
     mix-blend-mode: multiply;
