@@ -5,13 +5,11 @@
     margin-top: 0;
   }
   h2 {
-    &:last-of-type {
-      padding-bottom: 50px;
-      margin-bottom: 0;
-      border-bottom: 1px solid $border;
-      @include screen-above(1024px) {
-        padding-bottom: 100px;
-      }
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    border-bottom: 1px solid $border;
+    @include screen-above(1024px) {
+      padding-bottom: 100px;
     }
   }
   @include screen-above(1024px) {
