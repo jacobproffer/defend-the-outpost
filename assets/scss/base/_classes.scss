@@ -26,3 +26,13 @@
     fill: $white;
   }
 }
+
+.cta {
+  color: $white;
+  border-bottom: 1px solid $red;
+  @include transition(all 300ms ease-in-out);
+  &:hover {
+    color: $border;
+    border-bottom: 1px solid $border;
+  }
+}
