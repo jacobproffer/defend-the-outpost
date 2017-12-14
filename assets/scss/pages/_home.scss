@@ -119,13 +119,13 @@
 	transition: opacity 300ms ease-in-out;
   background-color: none;
   @include transition(background-color 300ms ease-in-out);
-  @supports (mix-blend-mode: lighten) {
+  @supports (mix-blend-mode: multiply) {
     background-color: rgba(131, 3, 3, .95);
     mix-blend-mode: multiply;
   }
   &:hover {
     background-color: rgba(0, 0, 0, .90);
-    @supports (mix-blend-mode: lighten) {
+    @supports (mix-blend-mode: multiply) {
       mix-blend-mode: multiply;
     }
   }

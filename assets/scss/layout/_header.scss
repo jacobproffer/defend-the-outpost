@@ -14,7 +14,7 @@
     z-index: 3;
     @include absolute(0, 0, 0, 0);
     @include size(100%);
-    @supports (mix-blend-mode: lighten) {
+    @supports (mix-blend-mode: multiply) {
       background-color: rgba(131, 3, 3, .95);
       mix-blend-mode: multiply;
     }
