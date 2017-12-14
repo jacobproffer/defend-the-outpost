@@ -270,9 +270,3 @@
     bottom: 0;
   }
 }
-
-@mixin animate() {
-  animation-name: zoomIn;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}

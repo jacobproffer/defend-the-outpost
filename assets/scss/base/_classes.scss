@@ -17,17 +17,6 @@
   border-bottom: solid 1px $uav-line;
 }
 
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale3d(.3, .3, .3);
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
 .drone {
   width: 44px;
   height: 25px;
