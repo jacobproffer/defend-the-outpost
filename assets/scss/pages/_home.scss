@@ -14,7 +14,7 @@
       }
     }
   }
-  @include screen-above(1280px) {
+  @include screen-above(1024px) {
     padding: 150px 0;
   }
 }
