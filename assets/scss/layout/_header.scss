@@ -15,7 +15,7 @@
     @include absolute(0, 0, 0, 0);
     @include size(100%);
     @supports (mix-blend-mode: lighten) {
-      background-color: rgba(218, 54, 16, .95);
+      background-color: rgba(131, 3, 3, .95);
       mix-blend-mode: multiply;
     }
   }
