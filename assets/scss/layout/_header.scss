@@ -159,7 +159,7 @@
 }
 
 .inactive {
-  color: $red;
+  color: rgba(110, 110, 110, 1);
   text-decoration: line-through;
 }
 
@@ -182,7 +182,7 @@
   span {
     @include transition(color 300ms ease-in-out);
     &:hover {
-      color: rgba(255, 255, 255, 0.6);
+      color: $border;
     }
     &:active {
       color: $uav-line;
